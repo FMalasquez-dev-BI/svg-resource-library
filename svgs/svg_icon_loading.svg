@@ -1,0 +1,60 @@
+<svg 
+  width="80" 
+  height="80" 
+  viewBox="0 0 100 100" 
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Contenido en desarrollo / cargando"
+>
+  <style>
+    /* Definición de la animación de giro del dash (el "relleno" del círculo) */
+    @keyframes dash-fill {
+      0% {
+        stroke-dasharray: 1, 200; /* Inicia con un pequeño dash */
+        stroke-dashoffset: 0;
+      }
+      50% {
+        stroke-dasharray: 89, 200; /* El dash crece */
+        stroke-dashoffset: -35px; /* Se desplaza un poco */
+      }
+      100% {
+        stroke-dasharray: 89, 200; /* Mantiene el dash */
+        stroke-dashoffset: -124px; /* Se desplaza completamente para reiniciar */
+      }
+    }
+
+    /* Definición de la animación de rotación completa del círculo */
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Estilo del círculo base (fondo) */
+    .loading-bg {
+      stroke: #e0e0e0; /* Un gris claro para el fondo */
+      stroke-width: 8;
+      fill: none;
+    }
+
+    /* Estilo del círculo de progreso (animado) */
+    .loading-spinner {
+      stroke: #1f6fe5; /* Azul oscuro profesional */
+      stroke-width: 8;
+      fill: none;
+      stroke-linecap: round; /* Bordes redondeados para un look suave */
+      
+      /* Animaciones */
+      animation: 
+        rotate 2s linear infinite,      /* Gira el círculo completo */
+        dash-fill 1.5s ease-in-out infinite; /* El relleno del dash */
+      
+      /* Punto de origen para la rotación */
+      transform-origin: center;
+    }
+  </style>
+
+  <circle class="loading-bg" cx="50" cy="50" r="40"/>
+
+  <circle class="loading-spinner" cx="50" cy="50" r="40"/>
+
+</svg>
