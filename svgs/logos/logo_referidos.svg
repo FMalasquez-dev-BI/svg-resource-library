@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" version="1.1" style="background-color: transparent;">
+  <defs>
+    <style>
+      .ref-blue { fill: #0284C7; } /* Azul profesional */
+      .ref-light { fill: #7DD3FC; } /* Azul claro */
+      .text-style { font-family: sans-serif; font-weight: bold; fill: #0C4A6E; }
+    </style>
+  </defs>
+
+  <g transform="translate(100, 80)">
+    <circle class="ref-blue" cx="150" cy="100" r="45"/>
+    <path class="ref-blue" d="M150,160 c-60,0-90,40-90,80 v20 h180 v-20 C240,200,210,160,150,160 z"/>
+    
+    <circle class="ref-light" cx="280" cy="180" r="30"/>
+    <path class="ref-light" d="M280,220 c-40,0-60,25-60,50 v15 h120 v-15 C340,245,320,220,280,220 z"/>
+    
+    <path d="M190,140 Q240,140 250,175" fill="none" stroke="#0284C7" stroke-width="8" stroke-dasharray="10,5" stroke-linecap="round"/>
+  </g>
+
+  <text x="50%" y="460" text-anchor="middle" font-size="55" class="text-style">REFERIDOS</text>
+</svg>
